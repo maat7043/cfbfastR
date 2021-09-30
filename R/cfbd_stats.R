@@ -779,6 +779,9 @@ cfbd_stats_season_player <- function(year,
         dplyr::select(cols, tidyr::everything()) %>%
         dplyr::mutate_at(numeric_cols, as.numeric) %>%
         as.data.frame()
+      
+      # Check if Category is Null
+      if ( c
 
       if(verbose){ 
         message(glue::glue("{Sys.time()}: Scraping season stats - player..."))
